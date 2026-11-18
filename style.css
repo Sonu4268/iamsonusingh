@@ -1,0 +1,32 @@
+:root{--bg:#f7f9fc;--ink:#1b2a41;--muted:#5b6b7f;--line:#d9e1ea;--accent:#0f6e8c;--surface:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#10192a;--ink:#e8eef6;--muted:#9fb0c4;--line:#27374d;--accent:#5cc2e0;--surface:#16233a}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "Public Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Public Sans",sans-serif;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2.4rem,7vw,4.5rem);letter-spacing:-.02em}
+h2{font-size:1.7rem;margin-top:2.5em}
+h3{font-size:1.2rem;margin-bottom:.2em}
+a{color:var(--accent)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+header{border-bottom:1px solid var(--line)}
+nav{max-width:860px;margin:auto;padding:16px 24px;display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center}
+nav .logo{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;color:var(--ink);text-decoration:none;margin-right:auto}
+nav a{text-decoration:none;color:var(--muted)}
+nav a[aria-current="page"]{color:var(--ink);border-bottom:2px solid var(--accent)}
+main{max-width:860px;margin:auto;padding:56px 24px 80px}
+.lead{font-size:1.25rem;color:var(--muted);max-width:60ch}
+.btn{display:inline-block;padding:12px 22px;border-radius:6px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;margin:8px 12px 8px 0}
+.btn.alt{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.row{border-left:3px solid var(--accent);padding:4px 0 4px 20px;margin:0 0 32px}
+.row small,.meta{color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none}
+.tags li{border:1px solid var(--line);background:var(--surface);padding:4px 12px;border-radius:999px;font-size:.9rem}
+.hero-in{animation:in .7s ease both}
+@keyframes in{from{opacity:0;transform:translateY(12px)}}
+@media (prefers-reduced-motion:reduce){.hero-in{animation:none}html{scroll-behavior:auto}}
+footer{max-width:860px;margin:auto;padding:24px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px 40px}
+.grid2 h3{margin-top:1.4em}
+.grid2 ul{padding-left:18px;margin:0;color:var(--muted)}
+.row ul{padding-left:18px;margin:.5em 0}
